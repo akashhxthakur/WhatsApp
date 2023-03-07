@@ -4,7 +4,12 @@ import ChatListItem from "./src/components/ChatListitem";
 import ChatsScreen from "./src/components/screens/ChatsScreen";
 import ChatScreen from "./src/components/screens/ChatScreen";
 import Navigator from "./src/navigation";
-export default function App() {
+import { Amplify } from "aws-amplify";
+import awsconfig from "./src/aws-exports";
+import { withAuthenticator } from "aws-amplify-react-native";
+
+Amplify.configure({ ...awsconfig, Analytics: { disabled: true } });
+function App() {
   return (
     <View style={styles.container}>
       <Navigator />
@@ -20,3 +25,4 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
 });
+export default withAuthenticator(App);

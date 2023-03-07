@@ -19,7 +19,7 @@ const Navigator = () => {
           options={{ headerShown: false }}
         />
         <Stack.Screen name="Chat" component={ChatScreen} />
-        {/* <Stack.Screen name="Contacts" component={ContactsScreen} /> */}
+        <Stack.Screen name="Contacts" component={ContactsScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
