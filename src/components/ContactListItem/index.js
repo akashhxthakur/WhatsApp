@@ -13,7 +13,7 @@ const ContactListItem = ({ user }) => {
       style={styles.container}
     >
       <Image source={{ uri: user.image }} style={styles.image} />
-      <View style={styles.contaent}>
+      <View style={styles.content}>
         <Text numberOfLines={1} style={styles.name}>
           {user.name}
         </Text>
@@ -47,6 +47,9 @@ const styles = StyleSheet.create({
   },
   subTitle: {
     color: "gray",
+  },
+  content: {
+    flex: 1,
   },
 });
 export default ContactListItem;
